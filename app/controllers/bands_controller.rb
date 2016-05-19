@@ -1,7 +1,7 @@
 class BandsController < ApplicationController
 
   def index
-    @bands = Band.all
+    @bands = Band.all.order('name asc')
   end
 
   def new
@@ -13,7 +13,7 @@ class BandsController < ApplicationController
 
     if bands.count > 1
       bands.each do |band_name|
-        band = Band.new name: band_name
+        band = Band.new name: band_name.strip
         band.save!
       end
     else
