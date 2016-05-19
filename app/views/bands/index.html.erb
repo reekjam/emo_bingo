@@ -1,0 +1,22 @@
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @bands.each_with_index do |band, index| %>
+		<tr>
+			<td><%= "#{index + 1} - #{band.name}" %></td>
+			<td><%= link_to 'Delete', band, method: :delete, data: {confirm: 'You sure?'}, class: 'btn delete' %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<div>
+	<span>
+		<%= link_to 'Add New Band', new_band_path, class: 'btn' %>
+	</span>
+</div>

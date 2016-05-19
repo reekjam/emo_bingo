@@ -1,0 +1,5 @@
+<%= simple_form_for @band do |f| %>
+  <%= f.label :name, 'Enter a Band Name' %>
+  <%= f.input :name, label: false %>
+  <%= f.submit 'Add Band' %>
+<% end %>
