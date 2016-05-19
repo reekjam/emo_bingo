@@ -38,3 +38,21 @@ table th {
 .card tr:nth-child(3) td:nth-child(3) {
 	background-color: #ff7373;
 }
+
+.alert {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	color: #f5f5f5;
+	padding: 20px;
+}
+
+.notice {
+	@extend .alert;
+	background-color: #00ff7f;
+}
+
+.error {
+	@extend .alert;
+	background-color: #ff7373;
+}

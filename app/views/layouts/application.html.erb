@@ -9,6 +9,12 @@
 </head>
 <body>
 
+	<% unless flash.empty? %>
+		<div class=<%= flash.keys.first.to_s %>>
+			<%= flash[flash.keys.first] %>
+		</div>
+	<% end %>
+
 <%= yield %>
 
 </body>
