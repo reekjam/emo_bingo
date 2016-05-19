@@ -1,5 +1,7 @@
 html, body {
 	height: 100%;
+	background-color: #f5f5f5;
+	font-family: 'Karla', serif;
 }
 
 table th {
@@ -8,11 +10,14 @@ table th {
 
 .card {
 	table-layout: fixed;
-	border: solid 1px gray;
+	width: 100%;
 }
 
 .card td {
-	width: 18%;
+	display: inline-block;
+	height: 100%;
+	width: 19%;
+	margin: 2px 1px;
 	border: solid 1px gray;
 	overflow: hidden;
 	text-align: center;
@@ -20,6 +25,10 @@ table th {
 
 .card tr {
 	height: 150px;
+}
+
+.card td.unclicked {
+	background-color: #fff;
 }
 
 .card td.clicked {
