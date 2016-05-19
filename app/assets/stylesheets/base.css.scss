@@ -1,58 +1,95 @@
 html, body {
-	height: 100%;
-	background-color: #f5f5f5;
-	font-family: 'Karla', serif;
+  height: 100%;
+  background-color: #f5f5f5;
+  font-family: 'Karla', serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 table th {
-	text-align: left;
+  text-align: left;
 }
 
 .card {
-	table-layout: fixed;
-	width: 100%;
+  table-layout: fixed;
+  width: 100%;
 }
 
 .card td {
-	display: inline-block;
-	height: 100%;
-	width: 19%;
-	margin: 2px 1px;
-	border: solid 1px gray;
-	overflow: hidden;
-	text-align: center;
+  display: inline-block;
+  height: 100%;
+  width: 19%;
+  margin: 2px 1px;
+  border: solid 1px gray;
+  overflow: hidden;
+  text-align: center;
 }
 
 .card tr {
-	height: 150px;
+  height: 150px;
 }
 
 .card td.unclicked {
-	background-color: #fff;
+  background-color: #fff;
 }
 
 .card td.clicked {
-	background-color: #5cfff3;
+  background-color: #5cfff3;
 }
 
 .card tr:nth-child(3) td:nth-child(3) {
-	background-color: #ff7373;
+  background-color: #ff7373;
 }
 
 .alert {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	color: #f5f5f5;
-	padding: 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #f5f5f5;
+  padding: 20px;
 }
 
 .notice {
-	@extend .alert;
-	background-color: #00ff7f;
+  @extend .alert;
+  background-color: #00ff7f;
 }
 
 .error {
-	@extend .alert;
-	background-color: #ff7373;
+  @extend .alert;
+  background-color: #ff7373;
+}
+
+a.btn {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.btn {
+  background-color: #00ff7f;
+  padding: 6px;
+  color: #f5f5f5;
+  border-radius: 4px;
+}
+
+input.btn {
+  @extend a.btn;
+  border: none;
+  font-size: 14px;
+  padding: 7px;
+}
+
+input[type=text] {
+  line-height: 25px;
+  width: 25%;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.actions {
+  margin-top: 15px;
 }

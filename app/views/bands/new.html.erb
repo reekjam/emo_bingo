@@ -1,5 +1,9 @@
 <%= simple_form_for @band do |f| %>
   <%= f.label :name, 'Enter a Band Name' %>
   <%= f.input :name, label: false %>
-  <%= f.submit 'Add Band' %>
+  <%= f.submit 'Add Band', class: 'btn' %>
 <% end %>
+
+<div class='actions'>
+  <%= link_to 'View All Bands', bands_path %>
+</div>

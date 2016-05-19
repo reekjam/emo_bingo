@@ -5,15 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-	<link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-	<% unless flash.empty? %>
-		<div class=<%= flash.keys.first.to_s %>>
-			<%= flash[flash.keys.first] %>
-		</div>
-	<% end %>
+  <% unless flash.empty? %>
+    <div class=<%= flash.keys.first.to_s %>>
+      <%= flash[flash.keys.first] %>
+    </div>
+  <% end %>
 
 <%= yield %>
 
