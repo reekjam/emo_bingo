@@ -2,26 +2,30 @@ html, body {
 	height: 100%;
 }
 
-table.card {
+table th {
+	text-align: left;
+}
+
+.card {
 	table-layout: fixed;
 	border: solid 1px gray;
 }
 
-table.card th, td {
+.card td {
 	width: 18%;
 	border: solid 1px gray;
 	overflow: hidden;
 	text-align: center;
 }
 
-table.card tr {
+.card tr {
 	height: 150px;
 }
 
-table.card td.clicked {
+.card td.clicked {
 	background-color: #5cfff3;
 }
 
-table.card tr:nth-child(3) td:nth-child(3) {
+.card tr:nth-child(3) td:nth-child(3) {
 	background-color: #ff7373;
 }
