@@ -13,12 +13,20 @@ class BandsController < ApplicationController
 
     if bands.count > 1
       bands.each do |band_name|
-        band = Band.new name: band_name.strip
-        band.save!
+        begin
+          band = Band.new name: band_name.strip
+          band.save
+        rescue ActiveRecord::RecordInvalid
+        end
       end
+      flash[:notice] = 'Cool. Bands added.'
     else
       band = Band.new band_params
-      band.save!
+      if band.save
+        flash[:notice] = 'Sweet. Band added!'
+      else
+        flash[:error] = 'There was an error. Bummer.'
+      end
     end
 
     redirect_to bands_path
@@ -27,7 +35,12 @@ class BandsController < ApplicationController
   def destroy
     @band = Band.find_by id: params[:id]
 
-    @band.delete
+    if @band.delete
+      flash[:notice] = 'That band was so over, anyway.'
+    else
+      flash[:error] = 'Arg! There was an error.'
+    end
+
     redirect_to bands_path
   end
 
