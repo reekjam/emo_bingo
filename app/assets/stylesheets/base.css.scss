@@ -18,8 +18,7 @@ table th {
 }
 
 .card td {
-  display: inline-block;
-  height: 100%;
+  display: table-cell;
   width: 19%;
   margin: 2px 1px;
   border: solid 1px gray;
