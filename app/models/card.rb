@@ -11,7 +11,7 @@ class Card
 
   def assign_tiles board, bands
     board.each_with_index do |tile, index|
-      unless tile == 'BINGO'
+      unless tile == 'FREE'
         bands = bands.shuffle
         board[index] = bands.pop
       end
