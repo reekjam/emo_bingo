@@ -1,5 +1,5 @@
 <% unless @bands.empty? %>
-<h1>Your Bands</h1>
+<h1>Bands To Cry To</h1>
 <table>
   <thead>
     <tr>
@@ -20,5 +20,7 @@
 
 <div class='actions'>
   <%= link_to 'Add New Band', new_band_path, class: 'btn' %>
+</div>
+<div class='actions'>
   <%= link_to 'Bingo Board', start_path %>
 </div>
