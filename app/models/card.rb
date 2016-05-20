@@ -3,7 +3,7 @@ class Card
 
   def initialize
     self.board = Array.new(25, nil)
-    self.board[12] = 'BINGO'
+    self.board[12] = 'FREE'
     bands = Band.all.collect(&:name)
 
     assign_tiles self.board, bands
