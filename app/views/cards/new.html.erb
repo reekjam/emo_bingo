@@ -3,7 +3,7 @@
     <% @card.board.each_slice(5) do |row| %>
     <tr>
       <% row.each do |band| %>
-      <td class='unclicked'><%= band %></td>
+	      <td class='unclicked'><%= link_to band, '#' %></td>
       <% end %>
     </tr>
     <% end %>

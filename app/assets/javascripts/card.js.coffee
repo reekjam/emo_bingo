@@ -6,3 +6,6 @@ jQuery ->
 		else
 			$(this).removeClass 'clicked'
 			$(this).addClass 'unclicked'
+
+	$(document).on 'click', 'table.card td a', (e) ->
+		e.preventDefault()

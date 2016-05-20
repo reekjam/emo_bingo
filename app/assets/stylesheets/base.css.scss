@@ -18,12 +18,18 @@ table th {
 }
 
 .card td {
-  display: table-cell;
   width: 19%;
   margin: 2px 1px;
   border: solid 1px gray;
   overflow: hidden;
   text-align: center;
+}
+
+.card td a {
+  display: block;
+  padding: 50% 0;
+  width: 100%;
+  color: #000;
 }
 
 .card tr {
