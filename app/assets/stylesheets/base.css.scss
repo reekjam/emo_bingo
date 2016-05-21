@@ -110,6 +110,9 @@ input[type=text] {
   @media (max-width: 480px) {
     width: 100%;
     line-height: 40px;
+    border-width: 0;
+    margin: 0;
+    padding: 0;
   }
 }
 
