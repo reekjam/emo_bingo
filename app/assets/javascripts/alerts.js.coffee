@@ -1,8 +1,8 @@
 jQuery ->
 
   $('.notice, .error').on 'click', ->
-    $(this).remove()
+    $(this).fadeOut()
 
   setTimeout (->
-    $('.notice, .error').slideUp 300
+    $('.notice, .error').fadeOut 300
   ), 10000
