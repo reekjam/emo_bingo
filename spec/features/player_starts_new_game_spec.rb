@@ -41,4 +41,16 @@ describe 'A player starting a new game' do
     expect(page).to have_selector :xpath, '//table[@class="card"]/tbody/tr[4]'
     expect(page).to have_selector :xpath, '//table[@class="card"]/tbody/tr[5]'
   end
+
+  it 'should not initialize the board with any clicked tiles' do
+    visit start_path
+    expect(page).to_not have_selector 'td.clicked'
+  end
+
+  it 'should change the tile class to clicked', js: true do
+    visit start_path
+    tile = find('td', text: 'Thrice')
+    tile.click
+    expect(tile[:class]).to eq 'clicked'
+  end
 end
